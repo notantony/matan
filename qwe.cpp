@@ -14,6 +14,12 @@ void print(char* s, int length) {
 	printf(")");
 }
 
+
+int isdig(char x){
+	if((x>='0'&&x<='9')||x=='e'||x=='.')return 1;
+	return 0;
+}
+
 void parse0(char* s, int length);       ///func
 void parse1(char* s, int length);       ///**
 void parse2(char* s, int length);       ///*,/
@@ -185,7 +191,7 @@ void parse3(char* s, int length) {
 		if (s[i] == ')'){
 			--balance;
 		}
-		digits += isdigit(s[i]) ? 1 : 0;
+		digits += isdig(s[i]) ? 1 : 0;
 	}
 	if (digits == length) {
 		printf("0");
