@@ -1,7 +1,7 @@
 #include <string>
 #include <stdio.h>
 #include <cstdio>
-
+#include <cstring>
 #pragma warning(disable : 4996)
 
 using namespace std;
@@ -105,7 +105,9 @@ void parse1(char* s, int length) {
 			print(s, length);
 			printf("*(");
 			printf("ln");
+			printf("(max(sys.float_info.min,");//qq
 			print(s, i);
+			printf("))");//qq
 			printf("*");
 			parse1(s + i + 2, length - i - 2);
 			printf("+");
