@@ -211,7 +211,7 @@ int main() {
 	freopen("deriv.in","rt",stdin);
 	freopen("deriv.out","wt",stdout);
 	//while(scanf("%s", c)!=EOF){
-	while(gets(c)){
+	while(gets_s(c)){
 		int len=((string)c).size();
 		int j=0;
 		for(int i=0;i<len;i++){
